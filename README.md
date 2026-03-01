@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+KanbanFlow: Task Management System
+A sleek, responsive Kanban board application designed for streamlined productivity. This project focuses on high-performance state management using React Hooks and a mobile-first UI approach.
 
-## Getting Started
+🚀 Features
+Full CRUD Operations: Create, read, update, and delete tasks with ease.
 
-First, run the development server:
+Intuitive Undo System: Accidentally deleted a task? Use the built-in undo functionality to restore your data instantly.
 
-```bash
+Fully Responsive: Optimized for every screen size, from mobile devices to wide-screen monitors.
+
+State Management: Built entirely using modern React Hooks (useContext, useReducer, and useState)—no heavy external libraries required.
+
+💾 Persistent Storage (LocalStorage)
+This application uses the browser's LocalStorage API to ensure your tasks persist even after a page refresh or browser restart.
+
+No Backend Required: The app is fully functional offline.
+
+Automatic Sync: Any change to the board (Adding, Deleting, or Undoing) triggers a state synchronization with the browser storage.
+
+Data Integrity: Uses JSON serialization to maintain complex task objects and column structures.
+
+🛠️ Tech Stack
+Framework: Next.js
+
+Language: TypeScript
+
+Styling: [Tailwind CSS / CSS Modules]
+
+State: React Hooks API
+
+📦 Installation & Setup
+Clone the repository:
+
+Bash
+git clone https://github.com/your-username/kanban-board.git
+Install dependencies:
+
+Bash
+npm install
+Run the development server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open the app:
+Navigate to http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧠 Architecture & State Logic
+This application utilizes a Unidirectional Data Flow pattern. By leveraging useReducer combined with useContext, the app maintains a "Single Source of Truth" without the overhead of Redux.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Key Hooks Used:
+useReducer: Manages complex state transitions like moving tasks between columns and handling the "Undo" stack.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+useContext: Provides global access to the task state across the component tree.
 
-## Learn More
+useEffect: Syncs task data with local storage to prevent data loss on refresh.
 
-To learn more about Next.js, take a look at the following resources:
+📱 Responsive Design
+The UI adapts dynamically to your device:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Mobile: Single-column view with a drawer or tab system for switching categories.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Desktop: Full multi-column drag-and-drop layout.
 
-## Deploy on Vercel
+🤝 Contributing
+Contributions are welcome! If you have suggestions for new features or improvements, feel free to open an issue or submit a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fork the Project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
