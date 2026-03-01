@@ -32,7 +32,7 @@ State: React Hooks API
 Clone the repository:
 
 Bash
-git clone https://github.com/your-username/kanban-board.git
+git clone https://github.com/igho3/kanban-board.git
 Install dependencies:
 
 Bash
